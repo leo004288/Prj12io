@@ -17,11 +17,11 @@ public class Zipcode5 {
 		String    sidos    = in.nextLine(); 
 		
 		String [] sis      = sidos.trim().split(",");
-		String [] sidoList = new String[sis.length];
+//		String [] sidoList = new String[sis.length];
 		int    [] cnt      = new int[sis.length];
-		for (int j = 0; j < sidoList.length; j++) {
+		for (int j = 0; j < sis.length; j++) {
 			sis[j]      = sis[j].trim();			
-			sidoList[j] = sis[j];			
+//			sidoList[j] = sis[j];			
 			cnt[j]      = 0;
 		}
 

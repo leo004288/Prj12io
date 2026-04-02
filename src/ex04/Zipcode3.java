@@ -27,6 +27,7 @@ public class Zipcode3 {
 		BufferedReader br = new BufferedReader(fr);
 		
 		String title = br.readLine();   // 제목스킵
+		
 		String line  = "";
 		int cnt1 = 0;
 		int cnt2 = 0;

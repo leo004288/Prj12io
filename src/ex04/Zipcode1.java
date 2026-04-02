@@ -5,12 +5,12 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class Zipcode01 {
+public class Zipcode1 {
 	
 	public static void main(String[] args) throws IOException {
 		
 //		ZIPCODE,SIDO,GUGUN,DONG,BUNJI,SEQ
-		String path  = Zipcode01.class.getResource("").getPath();
+		String path  = Zipcode1.class.getResource("").getPath();
 		String fname = "zipcode_utf8.csv";
 		File   file  = new File(path + fname);
 		
@@ -32,7 +32,7 @@ public class Zipcode01 {
 //			1. 전국의 롯데백화점의 갯수 출력
 //			135-704,서울,강남구,대치4동 롯데백화점(강남점),,190
 //			if( dong.contains("롯데백화점") ) {
-			if( dong.indexOf("럭키아파트") > -1 ) {
+			if( dong.indexOf("롯데백화점") > -1 ) {
 				String fmt = "[%s] %s %s %s %s %d";
 				String addr = String.format(fmt,
 						zipcode, sido, gugun, dong, bunji, seq);
@@ -41,6 +41,7 @@ public class Zipcode01 {
 			}
 			
 		}
+		
 		System.out.println(cnt + "건");
 		
 		br.close();

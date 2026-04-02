@@ -6,17 +6,15 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Zipcode4 {
+public class Zipcode7 {
 	
 
 	public static void main(String[] args) throws IOException {
 		
 //		Scanner in = new Scanner(System.in);
 		
-//		705-818 대구 남구  대명2동 1817∼1818 11713
-// 		코드    시도 구군  동      번지      번호		
-//		ZIPCODE SIDO GUGUN DONG    BUNJI     SEQ
-		String path  = Zipcode4.class.getResource("").getPath();
+//		ZIPCODE,SIDO,GUGUN,DONG,BUNJI,SEQ
+		String path  = Zipcode7.class.getResource("").getPath();
 		String fname = "zipcode_utf8.csv";
 		File   file  = new File(path + fname);
 		
@@ -25,11 +23,9 @@ public class Zipcode4 {
 		
 		String title = br.readLine();   // 제목스킵
 		String line  = "";
-		String cnt   = "";
-//		int cnt = 0;
+		int cnt = 0;
 		
-		
-//		System.out.println("");
+//		System.out.println("동: ");
 //		String inAddr = in.nextLine();
 		
 		while( (line = br.readLine()) !=null ) {
@@ -41,14 +37,13 @@ public class Zipcode4 {
 			String bunji   = li[4].trim();
 			int    seq     = Integer.parseInt(li[5].trim());
 
-//			4. 한국의 시도명 출력 - 17건
-//			if( sido.indexOf(inAddr) > -1 ) {
-//				String fmt = "[%s] %s %s %s %s %d";
-//				String addr = String.format(fmt,
-//						zipcode, sido, gugun, dong, bunji, seq);
-//				System.out.println(addr);
-//				cnt++;				
-//			}
+			if( dong.indexOf("부전2동") > -1 && sido.indexOf("부산") > -1 ) {
+				String fmt = "[%s]";
+				String addr = String.format(fmt,
+						zipcode);
+				System.out.println(addr);
+				cnt++;				
+			}
 			
 		}
 		System.out.println(cnt + "건");
