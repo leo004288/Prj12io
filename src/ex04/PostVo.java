@@ -88,5 +88,15 @@ public class PostVo {
 				+ bunji + ", seq=" + seq + "]";
 	}
 	
+	public String getAddress() {
+		String result = "[" + zipcode + "]" 
+	                         + sido + " " 
+	                         + gugun + " "
+	                         + dong + " "
+				             + bunji + " " 
+	                         + seq ;
+		return result;
+	}
+	
 	
 } // 
