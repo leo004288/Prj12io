@@ -37,7 +37,7 @@ public class Zipcode9 {
 					if(bw !=null) bw.close();
 					if(fw !=null) fw.close();
 					
-					outFname = path = sido + ".csv";
+					outFname = path + sido + ".csv";
 					File oFile = new File(outFname);
 					if (oFile.exists()) {
 						oFile.delete();
